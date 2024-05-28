@@ -1,0 +1,164 @@
+
+body {
+    
+    background: linear-gradient(90deg, #ba3267, #9a5022);
+}
+
+h1
+{
+    text-align: center;
+    text-shadow: -2px 2px black;
+    color: cyan;
+    font-size: 50px;
+}
+
+/* Slicebox Style */
+.sb-slider {
+    margin: 0px 100px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    list-style: none;
+    padding: 0;
+}
+
+.sb-slider li {
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+
+img
+{
+    width: 80%;
+    height: 500px;
+    margin: 0px auto;
+    display: block;
+    border: 2px solid wheat;
+    background-size: cover;
+
+}
+
+
+.sb-description
+{
+    width: 80%;
+    padding: 10px;
+    bottom: 0px;
+    left: 105px;
+    right: 10px;
+    z-index: 1000;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    color: white;
+    transition: all 300ms;
+}
+
+.sb-slider li.sb-current .sb-description
+{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+    opacity: 1;
+}
+
+.sb-slider li.sb-current .sb-description:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+    filter: alpha(opacity=99);
+    background: rgba(250, 0, 0, 0.8);
+}
+
+.sb-perspective {
+    position: relative;
+}
+
+.sb-perspective > div
+{
+    position: absolute;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.sb-side
+{
+    margin: 10;
+    display: block;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+
+.container
+{
+    margin: 30px;
+    width: 80%;
+    height: 500px;
+
+}
+.wrapper
+{
+    width: 100%;
+    height: 400px;
+}
+.sb-description
+{
+    position: absolute;
+    left: 95px;
+    width: 80%;
+}
+.sb-description h3
+{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    text-shadow: -2px 2px 2px red;
+}
+
+.sb-description h3:hover
+{
+    color: black;
+    text-shadow: 0 2px 2px white;
+    font-family: fantasy;
+    transform: scale(1.2);
+}
+
+.nav-arrows
+{
+    display: none;
+}
+
+.nav-arrows a
+{
+    width: 60px;
+    height: 60px;
+    background: #000 url(https://tympanus.net/Development/Slicebox/images/nav.png) no-repeat top left;
+    background-size: cover;
+    opacity: 0.6;
+    position: absolute;
+    top: 45%;
+    left: 80px;
+    text-indent: -9000px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
+    transition: all 300ms;
+}
+
+.nav-arrows a:first-child
+{
+    left: auto;
+    right: 80px;
+    background-position: top right;
+}
+
+.nav-arrows a:hover
+{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
